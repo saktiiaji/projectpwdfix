@@ -1,31 +1,29 @@
-/* --- PALET WARNA & VARIABEL TEMA (Biru, Abu, Hitam, Putih, Biru Muda) --- */
 :root {
-    --bg-color: #f4f7f9;          /* Putih keabuan lembut */
-    --text-color: #1e293b;        /* Hitam arang / abu sangat gelap */
-    --card-bg: #ffffff;           /* Putih bersih */
-    --navbar-bg: #ffffff;         /* Putih */
-    --navbar-text: #1d4ed8;       /* Biru utama */
-    --border-color: #cbd5e1;      /* Abu-abu terang */
-    --hero-bg: #1e3a8a;           /* Biru tua klasik */
-    --hero-text: #ffffff;         /* Putih */
-    --highlight-color: #3b82f6;   /* Biru muda / terang */
-    --accent-color: #93c5fd;      /* Biru muda lembut */
-    --input-bg: #ffffff;          /* Putih */
+    --bg-color: #f4f7f9;          
+    --text-color: #1e293b;        
+    --card-bg: #ffffff;           
+    --navbar-bg: #ffffff;         
+    --navbar-text: #1d4ed8;       
+    --border-color: #cbd5e1;      
+    --hero-bg: #1e3a8a;           
+    --hero-text: #ffffff;         
+    --highlight-color: #3b82f6;   
+    --accent-color: #93c5fd;      
+    --input-bg: #ffffff;         
 }
 
-/* Pengaturan Mode Gelap (Dark Mode) */
 body.dark-mode {
-    --bg-color: #0f172a;          /* Hitam kebiruan */
-    --text-color: #f1f5f9;        /* Putih tulang */
-    --card-bg: #1e293b;           /* Abu-abu gelap / hitam arang */
-    --navbar-bg: #1e293b;         /* Abu-abu gelap */
-    --navbar-text: #60a5fa;       /* Biru muda */
-    --border-color: #334155;      /* Abu-abu gelap */
-    --hero-bg: #0f172a;           /* Biru tua gelap */
-    --hero-text: #f1f5f9;         /* Putih */
-    --highlight-color: #60a5fa;   /* Biru muda */
-    --accent-color: #1e3a8a;      /* Biru tua */
-    --input-bg: #0f172a;          /* Abu-abu gelap untuk form */
+    --bg-color: #0f172a;         
+    --text-color: #f1f5f9;        
+    --card-bg: #1e293b;           
+    --navbar-bg: #1e293b;         
+    --navbar-text: #60a5fa;       
+    --border-color: #334155;      
+    --hero-bg: #0f172a;           
+    --hero-text: #f1f5f9;        
+    --highlight-color: #60a5fa;   
+    --accent-color: #1e3a8a;      
+    --input-bg: #0f172a;          
 }
 
 * {
@@ -80,7 +78,6 @@ body {
     color: var(--highlight-color);
 }
 
-/* --- TOMBOL MODE GELAP (DINAMIS DARI JS) --- */
 #theme-toggle {
     background-color: var(--accent-color);
     border: 1px solid var(--border-color);
