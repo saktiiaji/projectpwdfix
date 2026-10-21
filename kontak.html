@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak | Apresiasi Prestasi Mahasiswa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Prestasi Kampus</div>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="prestasi.html">Prestasi</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="hero">
+    <h1>Pengajuan & Informasi Prestasi</h1>
+    <p>Laporkan pencapaian terbaru Anda atau hubungi tim pengelola.</p>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section class="card">
+        <h2>Sekretariat & Info</h2>
+        <div class="info-list">
+          <div class="menu-item" style="margin-bottom: 12px;">
+            <h3>Lokasi Kantor</h3>
+            <p>Ruang Bagian Akademik, Gedung Utama Politeknik Negeri Cilacap</p>
+          </div>
+          <div class="menu-item" style="margin-bottom: 12px;">
+            <h3>Jam Layanan</h3>
+            <p>Senin - Jumat: 08:00 - 16:00 WIB</p>
+          </div>
+          <div class="menu-item">
+            <h3>Kontak Resmi</h3>
+            <p>WhatsApp: 0812-3456-7890<br>Email: prestasi@pnc.ac.id</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Form Pengajuan Prestasi</h2>
+        <form id="form-pesan" class="form-kontak">
+          <label for="nama">Nama Lengkap & NIM</label>
+          <input type="text" id="nama" placeholder="Contoh: Budi Santoso (240102)" />
+
+          <label for="email">Email Kampus</label>
+          <input type="email" id="email" placeholder="mahasiswa@student.ac.id" />
+
+          <label for="pesan">Detail Prestasi / Lomba</label>
+          <textarea id="pesan" rows="4" placeholder="Tuliskan nama kejuaraan, tingkat, dan perolehan medali..."></textarea>
+
+          <button type="button" id="tombol-kirim">Kirim Pengajuan</button>
+        </form>
+        <p id="status-form"></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Apresiasi Prestasi Mahasiswa. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
