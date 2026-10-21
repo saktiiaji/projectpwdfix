@@ -1,0 +1,287 @@
+/* --- PALET WARNA & VARIABEL TEMA (Biru, Abu, Hitam, Putih, Biru Muda) --- */
+:root {
+    --bg-color: #f4f7f9;          /* Putih keabuan lembut */
+    --text-color: #1e293b;        /* Hitam arang / abu sangat gelap */
+    --card-bg: #ffffff;           /* Putih bersih */
+    --navbar-bg: #ffffff;         /* Putih */
+    --navbar-text: #1d4ed8;       /* Biru utama */
+    --border-color: #cbd5e1;      /* Abu-abu terang */
+    --hero-bg: #1e3a8a;           /* Biru tua klasik */
+    --hero-text: #ffffff;         /* Putih */
+    --highlight-color: #3b82f6;   /* Biru muda / terang */
+    --accent-color: #93c5fd;      /* Biru muda lembut */
+    --input-bg: #ffffff;          /* Putih */
+}
+
+/* Pengaturan Mode Gelap (Dark Mode) */
+body.dark-mode {
+    --bg-color: #0f172a;          /* Hitam kebiruan */
+    --text-color: #f1f5f9;        /* Putih tulang */
+    --card-bg: #1e293b;           /* Abu-abu gelap / hitam arang */
+    --navbar-bg: #1e293b;         /* Abu-abu gelap */
+    --navbar-text: #60a5fa;       /* Biru muda */
+    --border-color: #334155;      /* Abu-abu gelap */
+    --hero-bg: #0f172a;           /* Biru tua gelap */
+    --hero-text: #f1f5f9;         /* Putih */
+    --highlight-color: #60a5fa;   /* Biru muda */
+    --accent-color: #1e3a8a;      /* Biru tua */
+    --input-bg: #0f172a;          /* Abu-abu gelap untuk form */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--navbar-text);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: var(--highlight-color);
+}
+
+/* --- TOMBOL MODE GELAP (DINAMIS DARI JS) --- */
+#theme-toggle {
+    background-color: var(--accent-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--highlight-color);
+    color: #ffffff;
+}
+
+.hero {
+    background-color: var(--hero-bg);
+    color: var(--hero-text);
+    text-align: center;
+    padding: 4.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--hero-text);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+main, .container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 1.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card h2 {
+    margin-bottom: 0.75rem;
+    color: var(--highlight-color);
+    font-size: 1.4rem;
+}
+
+.card-intro {
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.menu-item {
+    background-color: var(--bg-color);
+    padding: 1.2rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: var(--navbar-text);
+}
+
+body.dark-mode .menu-item h3 {
+    color: var(--highlight-color);
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.highlight {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--highlight-color);
+    font-weight: 600;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    margin-bottom: 0.5rem;
+}
+
+.form-kontak {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form-kontak label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-kontak button {
+    background-color: var(--highlight-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.form-kontak button:hover {
+    background-color: var(--hero-bg);
+}
+
+#status-form {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    border-top: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .menu {
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container, main {
+        max-width: 90%;
+        padding: 0 1.5rem;
+    }
+
+    .navbar {
+        padding: 1rem 3%;
+    }
+
+    .hero {
+        padding: 4.5rem 2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+}
