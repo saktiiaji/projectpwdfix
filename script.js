@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         themeToggleBtn.textContent = 'Mode Terang';
     }
 
-    // Fungsi tombol untuk mengubah tema pada halaman
     themeToggleBtn.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
         
